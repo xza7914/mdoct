@@ -1,0 +1,158 @@
+{
+    "name": "root",
+    "children": [
+      {
+        "name": "node1_1", 
+        "message":"t_msg_struct.mtype == 0x05 main.c line 801", 
+        "children": [
+          {
+            "name": "node2_1",
+            "message":"动态分配内存失败\n main.c line 746",
+            "children": [
+                {
+                    "name":"termination"
+                }
+            ]
+          },
+          {
+            "name": "node2_2",
+            "message":"加密错误:错误码 = 0x%x\n main.c line 755",
+            "children": [
+                {
+                    "name":"termination"
+                }
+            ]
+          },
+          {
+            "name":"node2_3",
+            "message":"********发送新消息,发送失败,commitTest failed[第%d次],errornum=%d,当前链表长度[%d]\r\n main.c line 808",
+            "children":[
+                {
+                    "name":"termination"
+                }
+            ]
+          },
+          {
+            "name":"node2_4",
+            "message":"发送新消息,发送成功,消息类型[0x%02x],消息长度[%d],当前链表长度[%d]!!!\r\n main.c line 813",
+            "children":[
+                {
+                    "name":"0x05 success"
+                }
+            ]
+          }
+
+        ]
+      },
+      {
+        "name": "node1_2",
+        "message":"t_msg_struct.mtype == 0x01 main.c line 818",
+        "children": [
+            {
+                "name": "node2_5",
+                "message":"动态分配内存失败\n main.c line 746",
+                "children": [
+                    {
+                        "name":"termination"
+                    }
+                ]
+              },
+              {
+                "name": "node2_6",
+                "message":"加密错误:错误码 = 0x%x\n main.c line 755",
+                "children": [
+                    {
+                        "name":"termination"
+                    }
+                ]
+              },
+              {
+                "name": "node2_7",
+                "message":"正在解数据．．．\r\n main.c line 764",
+                "children": [
+                    {
+                        "name": "node3_1",
+                        "message":"解错误:错误码 = 0x%x\n main.c line 767",
+                        "children": [
+                            {
+                                "name":"termination"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "node3_2",
+                        "message":"解数据结束．．．\r\n main.c line 770",
+                        "children": [
+                            {
+                                "name":"node4_1",
+                                "message":"********发送新消息,发送失败,commitTest failed[第%d次],errornum=%d,当前链表长度[%d]\r\n main.c line 826",
+                                "children":[
+                                    {
+                                        "name":"termination"
+                                    }
+                                ]
+                            },
+                            {
+                                "name":"node4_2",
+                                "message":"发送新消息,发送成功,消息类型[0x%02x],消息长度[%d],当前链表长度[%d]!!!\r\n main.c line 831",
+                                "children":[
+                                    {
+                                        "name":"0x01 success"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+              }
+        ]
+      },
+      {
+        "name":"node1_3",
+        "message":"t_msg_struct.mtype == 0x12 main.c line 837",
+        "children":[
+            {
+                "name":"0x12 success"
+            }
+        ]
+      },
+      {
+        "name":"node1_4",
+        "message":"t_msg_struct.mtype == 0x13 main.c line 842",
+        "children":[
+            {
+                "name":"0x13 success"
+            }
+        ]
+      },
+      {
+        "name":"node1_5",
+        "message":"t_msg_struct.mtype == 0x03 main.c line 865",
+        "children":[
+            {
+                "name":"node2_8",
+                "message":"********ID异常,请查看是否设置正确\r\n main.c line 873",
+                "children":[
+                    {
+                        "name":"termination"
+                    }
+                ]
+            },
+            {
+                "name":"node2_9",
+                "message":"********mmj收到未定义消息类型\n main.c line 878",
+                "children":[
+                    {
+                        "name":"termination"
+                    }
+                ]
+            },
+            {
+                "name":"0x03 success"   
+            }
+        ]
+      }
+    ]
+
+  }
+  

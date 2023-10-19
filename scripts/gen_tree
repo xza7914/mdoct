@@ -1,0 +1,43 @@
+#!/usr/bin/python3
+
+import json
+import sys
+
+def parse(node: dict, f):
+    name = node["name"]
+    f.write("\tstruct node *{} = malloc(sizeof(struct node));\n".format(name))
+    f.write("\t__CPROVER_assume({} != NULL);\n".format(name))
+
+    if node.get("children", None) == None:
+        return
+
+    children = node["children"]
+    
+    f.write("\t{}->children = malloc(sizeof(struct item) * {});\n"
+            .format(name, len(children)))
+    f.write("\t__CPROVER_assume({}->children != NULL);\n".format(name))
+    f.write("\n")
+
+    for i, child in enumerate(children):
+        parse(child, f)
+        f.write("\t{}->children[{}] = {};\n".format(name, i, child["name"]))
+        f.write("\n")
+
+
+def main():
+    file_name = sys.argv[1]
+
+    with open(file_name, "r") as f:
+        a = json.load(f)
+
+    f = open("a.c", "w")
+    f.write("#include <stdlib.h>\n")
+    f.write("#include \"..\include\status_tree.h\"\n")
+    f.write("\n")
+    f.write("void build_node() {\n")
+    parse(a, f)
+    f.write("}\n")
+
+if __name__ == "__main__":
+    main()
+
