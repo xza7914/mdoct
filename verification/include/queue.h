@@ -13,4 +13,10 @@
 #define QUEUE_SIZE LINK_MAX_LENGTH
 #define ARRAY_SIZE (QUEUE_SIZE + 1)
 
+bool que_empty();
+bool que_full();
+void que_push_back(struct node *a);
+void que_pop_front();
+struct node *que_get_front();
+
 #endif

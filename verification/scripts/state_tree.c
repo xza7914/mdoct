@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include "state_tree.h"
 
-void build_node() {
+struct node *build_node()
+{
 	struct node *root = malloc(sizeof(struct node));
 	__CPROVER_assume(root != NULL);
 
@@ -218,11 +219,14 @@ void build_node() {
 
 	node1_5->children[1].child = node2_9;
 
-	struct node *0x03 success = malloc(sizeof(struct node));
-	__CPROVER_assume(0x03 success != NULL);
+	struct node *success_0x03 = malloc(sizeof(struct node));
+	__CPROVER_assume(success_0x03 != NULL);
 
-	node1_5->children[2].child = 0x03 success;
+	node1_5->children[2].child = success_0x03;
 
 	root->children[4].child = node1_5;
+
+
+return root;
 
 }

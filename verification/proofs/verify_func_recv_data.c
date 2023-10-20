@@ -6,6 +6,7 @@
 
 #include "proof_helper.h"
 #include "main_header.h"
+#include "queue.h"
 
 extern struct MSG_NODE *list_head = NULL;
 extern struct MSG_NODE *list_end = NULL;
@@ -15,12 +16,17 @@ void producer_thread()
     for (;;)
     {
         struct MSG_STRUCT *msg = malloc(sizeof(struct MSG_STRUCT));
-        // ...
         __CPROVER_assume(msg != NULL);
+        // ...
 
         uint16_t len = nondet_uint16();
 
         AddListTill(*msg, len);
+        
+        struct node *n = malloc(sizeof(struct node));
+        __CPROVER_assume(n != NULL);
+
+        que_push_back(n);
     }
 }
 

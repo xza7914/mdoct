@@ -18,4 +18,6 @@ struct node
     struct item *children;
 };
 
+struct node* build_tree();
+
 #endif

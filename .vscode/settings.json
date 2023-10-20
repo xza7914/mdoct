@@ -5,6 +5,8 @@
         "stdbool.h": "c",
         "main_header.h": "c",
         "queue": "c",
-        "version": "c"
+        "version": "c",
+        "__node_handle": "c",
+        "queue.h": "c"
     }
 }
