@@ -9,7 +9,7 @@ struct node *build_node()
 	struct node *root = malloc(sizeof(struct node));
 	__CPROVER_assume(root != NULL);
 
-	root->children = malloc(sizeof(struct item) * 5);
+	root->children = malloc(sizeof(struct item) * 6);
 	__CPROVER_assume(root->children != NULL);
 
 	struct node *node1_1 = malloc(sizeof(struct node));
@@ -21,54 +21,22 @@ struct node *build_node()
 	struct node *node2_1 = malloc(sizeof(struct node));
 	__CPROVER_assume(node2_1 != NULL);
 
-	node2_1->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_1->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node2_1->children[0].child = termination;
-
 	node1_1->children[0].child = node2_1;
 
 	struct node *node2_2 = malloc(sizeof(struct node));
 	__CPROVER_assume(node2_2 != NULL);
 
-	node2_2->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_2->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node2_2->children[0].child = termination;
-
 	node1_1->children[1].child = node2_2;
-
-	struct node *node2_3 = malloc(sizeof(struct node));
-	__CPROVER_assume(node2_3 != NULL);
-
-	node2_3->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_3->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node2_3->children[0].child = termination;
-
-	node1_1->children[2].child = node2_3;
 
 	struct node *node2_4 = malloc(sizeof(struct node));
 	__CPROVER_assume(node2_4 != NULL);
 
-	node2_4->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_4->children != NULL);
+	node1_1->children[2].child = node2_4;
 
-	struct node *0x05 success = malloc(sizeof(struct node));
-	__CPROVER_assume(0x05 success != NULL);
+	struct node *node2_5 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_5 != NULL);
 
-	node2_4->children[0].child = 0x05 success;
-
-	node1_1->children[3].child = node2_4;
+	node1_1->children[3].child = node2_5;
 
 	root->children[0].child = node1_1;
 
@@ -78,153 +46,122 @@ struct node *build_node()
 	node1_2->children = malloc(sizeof(struct item) * 3);
 	__CPROVER_assume(node1_2->children != NULL);
 
-	struct node *node2_5 = malloc(sizeof(struct node));
-	__CPROVER_assume(node2_5 != NULL);
-
-	node2_5->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_5->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node2_5->children[0].child = termination;
-
-	node1_2->children[0].child = node2_5;
-
 	struct node *node2_6 = malloc(sizeof(struct node));
 	__CPROVER_assume(node2_6 != NULL);
 
-	node2_6->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_6->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node2_6->children[0].child = termination;
-
-	node1_2->children[1].child = node2_6;
+	node1_2->children[0].child = node2_6;
 
 	struct node *node2_7 = malloc(sizeof(struct node));
 	__CPROVER_assume(node2_7 != NULL);
 
-	node2_7->children = malloc(sizeof(struct item) * 2);
-	__CPROVER_assume(node2_7->children != NULL);
+	node1_2->children[1].child = node2_7;
+
+	struct node *node2_8 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_8 != NULL);
+
+	node2_8->children = malloc(sizeof(struct item) * 2);
+	__CPROVER_assume(node2_8->children != NULL);
 
 	struct node *node3_1 = malloc(sizeof(struct node));
 	__CPROVER_assume(node3_1 != NULL);
 
-	node3_1->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node3_1->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node3_1->children[0].child = termination;
-
-	node2_7->children[0].child = node3_1;
+	node2_8->children[0].child = node3_1;
 
 	struct node *node3_2 = malloc(sizeof(struct node));
 	__CPROVER_assume(node3_2 != NULL);
 
-	node3_2->children = malloc(sizeof(struct item) * 2);
-	__CPROVER_assume(node3_2->children != NULL);
+	node2_8->children[1].child = node3_2;
 
-	struct node *node4_1 = malloc(sizeof(struct node));
-	__CPROVER_assume(node4_1 != NULL);
-
-	node4_1->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node4_1->children != NULL);
-
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
-
-	node4_1->children[0].child = termination;
-
-	node3_2->children[0].child = node4_1;
-
-	struct node *node4_2 = malloc(sizeof(struct node));
-	__CPROVER_assume(node4_2 != NULL);
-
-	node4_2->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node4_2->children != NULL);
-
-	struct node *0x01 success = malloc(sizeof(struct node));
-	__CPROVER_assume(0x01 success != NULL);
-
-	node4_2->children[0].child = 0x01 success;
-
-	node3_2->children[1].child = node4_2;
-
-	node2_7->children[1].child = node3_2;
-
-	node1_2->children[2].child = node2_7;
+	node1_2->children[2].child = node2_8;
 
 	root->children[1].child = node1_2;
 
 	struct node *node1_3 = malloc(sizeof(struct node));
 	__CPROVER_assume(node1_3 != NULL);
 
-	node1_3->children = malloc(sizeof(struct item) * 1);
+	node1_3->children = malloc(sizeof(struct item) * 2);
 	__CPROVER_assume(node1_3->children != NULL);
 
-	struct node *0x12 success = malloc(sizeof(struct node));
-	__CPROVER_assume(0x12 success != NULL);
+	struct node *node2_9 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_9 != NULL);
 
-	node1_3->children[0].child = 0x12 success;
+	node2_9->children = malloc(sizeof(struct item) * 2);
+	__CPROVER_assume(node2_9->children != NULL);
+
+	struct node *node3_3 = malloc(sizeof(struct node));
+	__CPROVER_assume(node3_3 != NULL);
+
+	node2_9->children[0].child = node3_3;
+
+	struct node *node3_4 = malloc(sizeof(struct node));
+	__CPROVER_assume(node3_4 != NULL);
+
+	node2_9->children[1].child = node3_4;
+
+	node1_3->children[0].child = node2_9;
+
+	struct node *node2_10 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_10 != NULL);
+
+	node1_3->children[1].child = node2_10;
 
 	root->children[2].child = node1_3;
 
 	struct node *node1_4 = malloc(sizeof(struct node));
 	__CPROVER_assume(node1_4 != NULL);
 
-	node1_4->children = malloc(sizeof(struct item) * 1);
+	node1_4->children = malloc(sizeof(struct item) * 2);
 	__CPROVER_assume(node1_4->children != NULL);
 
-	struct node *0x13 success = malloc(sizeof(struct node));
-	__CPROVER_assume(0x13 success != NULL);
+	struct node *node2_11 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_11 != NULL);
 
-	node1_4->children[0].child = 0x13 success;
+	node1_4->children[0].child = node2_11;
+
+	struct node *node2_12 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_12 != NULL);
+
+	node1_4->children[1].child = node2_12;
 
 	root->children[3].child = node1_4;
 
 	struct node *node1_5 = malloc(sizeof(struct node));
 	__CPROVER_assume(node1_5 != NULL);
 
-	node1_5->children = malloc(sizeof(struct item) * 3);
+	node1_5->children = malloc(sizeof(struct item) * 5);
 	__CPROVER_assume(node1_5->children != NULL);
 
-	struct node *node2_8 = malloc(sizeof(struct node));
-	__CPROVER_assume(node2_8 != NULL);
+	struct node *node2_13 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_13 != NULL);
 
-	node2_8->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_8->children != NULL);
+	node1_5->children[0].child = node2_13;
 
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
+	struct node *node2_14 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_14 != NULL);
 
-	node2_8->children[0].child = termination;
+	node1_5->children[1].child = node2_14;
 
-	node1_5->children[0].child = node2_8;
+	struct node *node2_15 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_15 != NULL);
 
-	struct node *node2_9 = malloc(sizeof(struct node));
-	__CPROVER_assume(node2_9 != NULL);
+	node1_5->children[2].child = node2_15;
 
-	node2_9->children = malloc(sizeof(struct item) * 1);
-	__CPROVER_assume(node2_9->children != NULL);
+	struct node *node2_16 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_16 != NULL);
 
-	struct node *termination = malloc(sizeof(struct node));
-	__CPROVER_assume(termination != NULL);
+	node1_5->children[3].child = node2_16;
 
-	node2_9->children[0].child = termination;
+	struct node *node2_17 = malloc(sizeof(struct node));
+	__CPROVER_assume(node2_17 != NULL);
 
-	node1_5->children[1].child = node2_9;
-
-	struct node *success_0x03 = malloc(sizeof(struct node));
-	__CPROVER_assume(success_0x03 != NULL);
-
-	node1_5->children[2].child = success_0x03;
+	node1_5->children[4].child = node2_17;
 
 	root->children[4].child = node1_5;
+
+	struct node *node1_6 = malloc(sizeof(struct node));
+	__CPROVER_assume(node1_6 != NULL);
+
+	root->children[5].child = node1_6;
 
 
 return root;
