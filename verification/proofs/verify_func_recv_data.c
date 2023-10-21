@@ -20,13 +20,14 @@ void producer_thread()
         // ...
 
         uint16_t len = nondet_uint16();
+        
+        struct tree_node *root = malloc(sizeof(struct tree_node));
+        __CPROVER_assume(root != NULL);
+
+        root = push_forward(root, msg->mtype);
+        que_push_back(root);
 
         AddListTill(*msg, len);
-        
-        struct node *n = malloc(sizeof(struct node));
-        __CPROVER_assume(n != NULL);
-
-        que_push_back(n);
     }
 }
 

@@ -10,14 +10,16 @@
 struct item
 {
     int msg_id;
-    struct node *child;
+    struct tree_node *child;
 };
 
-struct node
+struct tree_node
 {
+    int len;
     struct item *children;
 };
 
-struct node* build_tree();
+struct tree_node* build_tree();
+struct tree_node *push_forward(struct tree_node *node, int msg_id);
 
 #endif
