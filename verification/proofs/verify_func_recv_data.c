@@ -33,4 +33,8 @@ void producer_thread()
 
 void harness()
 {
+    producer_thread();
+    __CPROVER_assume(list_head != NULL);
+    func_msg_queue(list_head->t_msg,list_head->len);
+     
 }

@@ -4,49 +4,49 @@
     "children": [
       {
         "name": "node1_1", 
-        "signal":"_0x05_00_833", 
+        "signal":"0500833", 
         "children": [
           {
             "name": "node2_1",
-            "signal":"_0x05_11_771"
+            "signal":"0511771"
           },
           {
             "name": "node2_2",
-            "signal":"_0x05_11_781"
+            "signal":"0511781"
           },
           {
             "name":"node2_4",
-            "signal":"_0x05_11_808"
+            "signal":"0511808"
           },
           {
             "name":"node2_5",
-            "signal":"_0x05_12_849"
+            "signal":"0512849"
           }
         ]
       },
       {
         "name": "node1_2",
-        "signal":"_0x01_00_855",
+        "signal":"0100855",
         "children": [
               {
                 "name": "node2_6",
-                "signal":"_0x01_11_771"
+                "signal":"0111771"
               },
               {
                 "name": "node2_7",
-                "signal":"_0x05_11_781"
+                "signal":"0511781"
               },
               {
                 "name":"node2_8",
-                "signal":"_0x05_10_791",
+                "signal":"0510791",
                 "children":[
                         {
                             "name":"node3_1",
-                            "signal":"_0x05_11_795"
+                            "signal":"0511795"
                         },
                         {
                             "name":"node3_2",
-                            "signal":"_0x05_12_800"
+                            "signal":"0512800"
                         }  
                     ]
               }
@@ -54,71 +54,71 @@
       },
       {
         "name":"node1_3",
-        "signal":"_0x12_00_882",
+        "signal":"1200882",
         "children":[
             {   
                 "name":"node2_9",
-                "signal":"_0x12_40_882",
+                "signal":"1240882",
                 "children":[
                     {
                         "name":"node3_3",
-                        "signal":"_0x12_22_883"
+                        "signal":"1222883"
                     },
                     {
                         "name":"node3_4",
-                        "signal":"_0x12_21_883"
+                        "signal":"1221883"
                     }
                 ]
             },
             {
                 "name":"node2_10",
-                "signal":"_0x12_41_882"
+                "signal":"1241882"
             }
         ]
       },
       {
         "name":"node1_4",
-        "signal":"_0x13_00_885",
+        "signal":"1300885",
         "children":[
             {
                 "name":"node2_11",
-                "signal":"_0x13_42_911"
+                "signal":"1342911"
             },
             {
                 "name":"node2_12",
-                "signal":"_0x13_41_911"
+                "signal":"1341911"
             }
         ]
       },
       {
         "name":"node1_5",
-        "signal":"_0x03_00_913",
+        "signal":"0300913",
         "children":[
             {
                 "name":"node2_13",
-                "signal":"_0x03_11_925"
+                "signal":"0311925"
             },
             {
                 "name":"node2_14",
-                "signal":"_0x03_11_1208"
+                "signal":"03111208"
             },
             {
                 "name":"node2_15",
-                "signal":"_0x03_11_1213"
+                "signal":"03111213"
             },
             {
                 "name":"node2_16",
-                "signal":"_0x03_11_1213"
+                "signal":"03111213"
             },
             {
                 "name":"node2_17",
-                "signal":"_0x03_22_928"
+                "signal":"0322928"
             }
         ]
       },
       {
         "name":"node1_6",
-        "signal":"_error_11_932"
+        "signal":"0011932"
       }
     ]
   }
