@@ -24,7 +24,7 @@ struct MSG_NODE
 void AddListTill(struct MSG_STRUCT t_msg, unsigned short len);
 void DeleteListHead();
 int LinkLength(struct MSG_NODE *t_link);
-
+void func_msg_queue(struct MSG_STRUCT t_msg_struct, unsigned short len);
 void *func_recv_data(void *arg);
 
 #endif
