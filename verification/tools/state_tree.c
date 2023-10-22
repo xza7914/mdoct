@@ -5,7 +5,7 @@
  */
 
 #include "state_tree.h"
-#include <stdlib>
+#include <stdlib.h>
 
 struct tree_node *push_forward(struct tree_node *node, int msg_id) {
     for (int i = 0; i < node->len; ++i) {
