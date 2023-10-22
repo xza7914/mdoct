@@ -15,8 +15,9 @@
 
 bool que_empty();
 bool que_full();
-void que_push_back(struct node *a);
+void que_push_back(struct tree_node *a);
 void que_pop_front();
-struct node *que_get_front();
+struct tree_node *que_get_front();
+void que_set_front(struct tree_node *node);
 
 #endif

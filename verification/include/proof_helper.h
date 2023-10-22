@@ -12,5 +12,7 @@
 
 bool nondet_bool();
 uint16_t nondet_uint16();
+uint32_t nondet_uint32();
+int nondet_int();
 
 #endif

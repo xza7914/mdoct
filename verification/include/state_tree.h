@@ -7,19 +7,24 @@
 #ifndef __STATE_TREE_H__
 #define __STATE_TREE_H__
 
+#include <stdbool.h>
+
 struct item
 {
-    int msg_id;
-    struct tree_node *child;
+    uint32_t signal_id;
+    struct tree_node *child_node;
 };
 
 struct tree_node
 {
-    int len;
+    uint32_t excepted_func_id;
+    bool (*check_func)(void **argv);
+
+    uint32_t children_num;
     struct item *children;
 };
 
 struct tree_node* build_tree();
-struct tree_node *push_forward(struct tree_node *node, int msg_id);
+struct tree_node *push_forward(struct tree_node *node, uint32_t signal_id);
 
 #endif

@@ -17,3 +17,15 @@ uint16_t nondet_uint16()
     uint16_t t;
     return t;
 }
+
+uint32_t nondet_uint32()
+{
+    uint32_t t;
+    return t;
+}
+
+int nondet_int()
+{
+    int t;
+    return t;
+}

@@ -7,13 +7,16 @@
 #include "state_tree.h"
 #include <stdlib.h>
 
-struct tree_node *push_forward(struct tree_node *node, int msg_id) {
-    for (int i = 0; i < node->len; ++i) {
-        if (node->children[i].msg_id == msg_id) {
-            return node->children[i].child;
+struct tree_node *push_forward(struct tree_node *node, uint32_t signal_id)
+{
+    for (int i = 0; i < node->children_num; ++i)
+    {
+        if (node->children[i].signal_id == signal_id)
+        {
+            return node->children[i].child_node;
         }
     }
 
-    __CPROVER_assert(0, "unexpected msg_id");
+    __CPROVER_assert(0, "unexpected signal_id");
     return NULL;
 }

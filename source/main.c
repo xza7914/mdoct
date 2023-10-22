@@ -35,45 +35,6 @@
 struct MSG_NODE *list_head = NULL;
 struct MSG_NODE *list_end = NULL;
 
-#pragma pack(push, 1)
-typedef struct // 42B
-{
-    unsigned char AppType;
-    unsigned char Level;
-    unsigned char Date[8];
-    unsigned char Time[8]; // 时间
-    unsigned char Manage[8];
-    unsigned int TxtLen; // 数据长度(原文字节数)
-    unsigned char *pSrcAddID;
-    int DestNum;
-    unsigned char *pDestAddress;
-} MESSAGE_HEAD, *pMESSAGE_HEAD;
-
-typedef struct
-{
-    int app1;
-    int app2;
-    int app3;
-    int app4;
-} APP_HEAD, *PAPP_HEAD;
-
-// 状态
-typedef struct j_status
-{
-    //// 可读写
-    uint32_t red_state;   // 0: 未启动；1：启动成功
-    uint32_t black_state; // 0: 未启动；1：启动成功
-    uint8_t id[32];       //
-    uint8_t date[64];     // 字符串形式，格式如"2022/04/12 10:00:00"
-                          //// 以下为只读
-    uint32_t core_state;
-    uint32_t disk_num;
-    uint8_t key1_date[64];
-    uint8_t key2_date[64];
-} __attribute__((packed)) j_status_t;
-
-#pragma pack(pop)
-
 /***************************************************************
             Dynamic linked library functions
 ***************************************************************/
